@@ -17,12 +17,12 @@ touch ~/.vimrc
     echo "set tabstop=4"
     echo "set shiftwidth=4"
     echo "set number"
+
+    echo "call plug#begin('~/.vim/plugged')"
+    echo "Plug 'scrooloose/nerdtree'"
+    echo "call plug#end()"
 } >> ~/.vimrc
 
-{
-    "call plug#begin('~/.vim/plugged')"
-    "Plug 'scrooloose/nerdtree'"
-    "call plug#end()"
-} >> ~/.vimrc
+source ~/.vimrc
 
-echo "请vim中 运行：PlugInstall"
+echo "请vim中 运行 :PlugInstall 安装插件"
